@@ -94,7 +94,7 @@ const Hero = () => {
           sx={{
             color: theme.palette.text.secondary,
             letterSpacing: 2,
-            fontWeight: 500,
+            fontWeight: 700, // BOLD
             mb: 2,
             textTransform: "uppercase",
             opacity: 0.7,
@@ -106,7 +106,7 @@ const Hero = () => {
         <Typography
           variant="h1"
           sx={{
-            fontWeight: 700,
+            fontWeight: 900, // EXTRA BOLD
             fontSize: { xs: "1.4rem", sm: "2rem", md: "3.5rem" },
             color: theme.palette.text.primary,
             mb: 1,
@@ -117,7 +117,7 @@ const Hero = () => {
           <span
             style={{
               color: theme.palette.text.primary,
-              fontWeight: 700,
+              fontWeight: 900,
               marginLeft: 8,
             }}
           >
@@ -127,7 +127,7 @@ const Hero = () => {
         <Typography
           variant="h2"
           sx={{
-            fontWeight: 700,
+            fontWeight: 900, // EXTRA BOLD
             fontSize: { xs: "1rem", sm: "1.3rem", md: "2.5rem" },
             color: theme.palette.primary.main,
             mb: 1,

@@ -78,29 +78,31 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Box sx={{ display: "flex" }}>
-        <Sidebar toggleTheme={toggleTheme} mode={mode} />
-        <Box
-          component="main"
-          sx={{
-            flexGrow: 1,
-            p: { xs: 2, sm: 3, md: 4 },
-            pl: { sm: "96px" },
-          }}
-        >
-          <div id="hero">
-            <Hero />
-          </div>
-          <div id="skills">
-            <Skills />
-          </div>
-          <div id="certifications">
-            <Certifications />
-          </div>
-          <div id="contact">
-            <Contact />
-          </div>
+      {/* Top navigation bar with icons aligned to the right */}
+      <Box sx={{ width: "100%", position: "fixed", top: 0, left: 0, zIndex: 1200 }}>
+        <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
+          <Sidebar toggleTheme={toggleTheme} mode={mode} />
         </Box>
+      </Box>
+      <Box
+        component="main"
+        sx={{
+          pt: 10, // Add top padding to avoid overlap with AppBar
+          px: { xs: 2, sm: 3, md: 4 },
+        }}
+      >
+        <div id="hero">
+          <Hero />
+        </div>
+        <div id="skills">
+          <Skills />
+        </div>
+        <div id="certifications">
+          <Certifications />
+        </div>
+        <div id="contact">
+          <Contact />
+        </div>
       </Box>
     </ThemeProvider>
   );
